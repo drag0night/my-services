@@ -1,5 +1,5 @@
 package com.vanhy.myservices.entity;
-// Generated Aug 31, 2018 8:12:53 PM by Hibernate Tools 4.3.5.Final
+// Generated Sep 4, 2018 10:02:23 AM by Hibernate Tools 4.3.5.Final
 
 import java.util.Date;
 import java.util.HashSet;
@@ -24,7 +24,7 @@ public class Employees implements java.io.Serializable {
 	private Date birthDate;
 	private String firstName;
 	private String lastName;
-	private String gender;
+	private char gender;
 	private Date hireDate;
 	private Set<Titles> titleses = new HashSet<Titles>(0);
 	private Set<Salaries> salarieses = new HashSet<Salaries>(0);
@@ -34,7 +34,7 @@ public class Employees implements java.io.Serializable {
 	public Employees() {
 	}
 
-	public Employees(int empNo, Date birthDate, String firstName, String lastName, String gender, Date hireDate) {
+	public Employees(int empNo, Date birthDate, String firstName, String lastName, char gender, Date hireDate) {
 		this.empNo = empNo;
 		this.birthDate = birthDate;
 		this.firstName = firstName;
@@ -43,7 +43,7 @@ public class Employees implements java.io.Serializable {
 		this.hireDate = hireDate;
 	}
 
-	public Employees(int empNo, Date birthDate, String firstName, String lastName, String gender, Date hireDate,
+	public Employees(int empNo, Date birthDate, String firstName, String lastName, char gender, Date hireDate,
 			Set<Titles> titleses, Set<Salaries> salarieses, Set<DeptEmp> deptEmps, Set<DeptManager> deptManagers) {
 		this.empNo = empNo;
 		this.birthDate = birthDate;
@@ -96,12 +96,12 @@ public class Employees implements java.io.Serializable {
 		this.lastName = lastName;
 	}
 
-	@Column(name = "gender", nullable = false, length = 2)
-	public String getGender() {
+	@Column(name = "gender", nullable = false, length = 1)
+	public char getGender() {
 		return this.gender;
 	}
 
-	public void setGender(String gender) {
+	public void setGender(char gender) {
 		this.gender = gender;
 	}
 

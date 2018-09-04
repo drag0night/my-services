@@ -1,5 +1,5 @@
 package com.vanhy.myservices.entity;
-// Generated Aug 31, 2018 8:12:53 PM by Hibernate Tools 4.3.5.Final
+// Generated Sep 4, 2018 10:02:23 AM by Hibernate Tools 4.3.5.Final
 
 import java.util.Date;
 import javax.persistence.Column;
